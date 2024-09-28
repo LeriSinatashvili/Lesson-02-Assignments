@@ -1,22 +1,18 @@
-﻿for (int i = 2; i < 100; i++)
+﻿int SumOfProductPrice = 0;
+String HaveMoreProducts = "";
+
+do
 {
-    if (i % 3 == 0 && i % 5 == 0)
-    {
+    Console.WriteLine("Enter product price and i will sum tem for you");
+    int ProductPrice = int.Parse(Console.ReadLine());
 
-        Console.WriteLine("FizzBuzz");
+    SumOfProductPrice = SumOfProductPrice + ProductPrice;
 
-    }
-    else if (i % 3 == 0)
-    {
-        Console.WriteLine("Fizz");
-    }
-    else if (i % 5 == 0)
-    {
-        Console.WriteLine("Buzz");
-    }
-    else
-    {
-        Console.WriteLine(i);
-    }
+    Console.WriteLine("Have more products ?");
+    HaveMoreProducts = Console.ReadLine();
 
 }
+while (HaveMoreProducts == "yes" || HaveMoreProducts == "y");
+
+Console.WriteLine("Sum of all your product price is");
+Console.WriteLine(SumOfProductPrice);
