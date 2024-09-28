@@ -1,16 +1,22 @@
-﻿int FirstRow = 0;
-
-while (FirstRow < 5)
+﻿for (int i = 2; i < 100; i++)
 {
-    int OtherRows = 0;
-
-    while (OtherRows < FirstRow + 1)
+    if (i % 3 == 0 && i % 5 == 0)
     {
 
-        Console.Write("*");
-        OtherRows++;
+        Console.WriteLine("FizzBuzz");
+
+    }
+    else if (i % 3 == 0)
+    {
+        Console.WriteLine("Fizz");
+    }
+    else if (i % 5 == 0)
+    {
+        Console.WriteLine("Buzz");
+    }
+    else
+    {
+        Console.WriteLine(i);
     }
 
-    Console.WriteLine();
-    FirstRow++;
 }
