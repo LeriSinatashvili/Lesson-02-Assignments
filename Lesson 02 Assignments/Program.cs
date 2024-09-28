@@ -1,17 +1,15 @@
-﻿int SumOfNumbers = 0;
-int i = 1;
-int CountDownNumber = 5;
+﻿bool ContinueAsking = true;
 
-while (i <= 5)
+do
 {
-
-    Console.WriteLine($"Enter numbers {CountDownNumber} times and i will sum them");
+    Console.WriteLine("I will keep asking until you enter number lower than 10");
     int EnteredNumber = int.Parse(Console.ReadLine());
 
-    SumOfNumbers = SumOfNumbers + EnteredNumber;
-    CountDownNumber = CountDownNumber - 1;
-    i++;
+    if (EnteredNumber < 10)
+    {
+        ContinueAsking = false;
+    }
 
 }
-
-Console.WriteLine("Sum of entered numbers is " + SumOfNumbers);
+while (ContinueAsking == true);
+Console.WriteLine("Its over");
