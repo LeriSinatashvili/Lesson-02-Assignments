@@ -1,7 +1,12 @@
-﻿for (int i = 2; i < 50; i++)
+﻿int SumOfNumbers = 0;
+int i = 2;
+
+while (i < 50)
 {
-    if (i % 2 == 0)
-    {
-        Console.WriteLine(i);
-    }
+
+    SumOfNumbers = SumOfNumbers + i;
+    i++;
+
 }
+
+Console.WriteLine(SumOfNumbers);
