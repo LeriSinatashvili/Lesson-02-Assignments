@@ -1,4 +1,7 @@
-﻿for (int i = 2; i < 100; i++)
+﻿for (int i = 2; i < 50; i++)
 {
-    Console.WriteLine(i);
+    if (i % 2 == 0)
+    {
+        Console.WriteLine(i);
+    }
 }
