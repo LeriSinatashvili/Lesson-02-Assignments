@@ -1,13 +1,22 @@
 ﻿bool ContinueAsking = true;
+int NumberOfYes = 3;
 
 do
 {
-    Console.WriteLine("I will keep asking until you enter number lower than 10");
-    int EnteredNumber = int.Parse(Console.ReadLine());
 
-    if (EnteredNumber < 10)
+    Console.WriteLine($"I need {NumberOfYes} yes from you to finish this");
+    string EnteredText = Console.ReadLine();
+
+    if (EnteredText == "yes")
     {
+        NumberOfYes = NumberOfYes - 1;
+    }
+
+    if(NumberOfYes == 0)
+    {
+
         ContinueAsking = false;
+
     }
 
 }
