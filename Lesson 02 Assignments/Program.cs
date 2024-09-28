@@ -1,24 +1,16 @@
-﻿bool ContinueAsking = true;
-int NumberOfYes = 3;
+﻿int FirstRow = 0;
 
-do
+while (FirstRow < 5)
 {
+    int OtherRows = 0;
 
-    Console.WriteLine($"I need {NumberOfYes} yes from you to finish this");
-    string EnteredText = Console.ReadLine();
-
-    if (EnteredText == "yes")
-    {
-        NumberOfYes = NumberOfYes - 1;
-    }
-
-    if(NumberOfYes == 0)
+    while (OtherRows < FirstRow + 1)
     {
 
-        ContinueAsking = false;
-
+        Console.Write("*");
+        OtherRows++;
     }
 
+    Console.WriteLine();
+    FirstRow++;
 }
-while (ContinueAsking == true);
-Console.WriteLine("Its over");
